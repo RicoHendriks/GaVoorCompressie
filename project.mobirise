@@ -61,7 +61,7 @@
       }
     ],
     "versionFirst": "4.7.6",
-    "uniqCompNum": 76,
+    "uniqCompNum": 87,
     "versionPublish": "4.10.5",
     "screenshot": "screenshot.png",
     "favicon": "",
@@ -785,199 +785,275 @@
         {
           "alias": false,
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
             "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value",
-              "& when (@gradientBg)": {
-                "background": "linear-gradient(@bg-value, @color2)"
-              }
+              "background-color": "@bg-value"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            ".carousel-control": {
-              "background": "#000"
+            "P": {
+              "color": "#767676"
             },
-            ".mbr-section-subtitle": {
-              "color": "#195aa5"
-            },
-            ".carousel-item": {
-              "-webkit-justify-content": "center",
-              "justify-content": "center",
-              ".media-container-row": {
-                "-webkit-flex-grow": "1",
-                "flex-grow": "1"
-              },
-              ".wrap-img": {
-                "text-align": "center",
-                "img": {
-                  "max-height": "150px",
-                  "width": "auto",
-                  "max-width": "100%"
-                }
-              }
-            },
-            ".carousel-controls": {
-              "display": "flex",
-              "-webkit-justify-content": "center",
-              "justify-content": "center",
-              ".carousel-control": {
-                "background": "#000",
-                "border-radius": "50%",
-                "position": "static",
-                "width": "40px",
-                "height": "40px",
-                "margin-top": "2rem",
-                "border-width": "1px",
-                "&.carousel-control-prev": {
-                  "left": "auto",
-                  "margin-right": "20px",
-                  "margin-left": "0"
-                },
-                "&.carousel-control-next": {
-                  "right": "auto",
-                  "margin-right": "0"
-                },
-                ".mbr-iconfont": {
-                  "font-size": "1rem"
-                }
-              }
-            },
-            ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5": {
-              "display": "none"
-            },
-            ".col-lg-15": {
-              "-webkit-box-flex": "0",
-              "-ms-flex": "0 0 100%",
-              "-webkit-flex": "0 0 100%",
-              "flex": "0 0 100%",
-              "max-width": "100%",
-              "position": "relative",
-              "min-height": "1px",
-              "padding-right": "10px",
-              "padding-left": "10px",
-              "width": "100%"
-            },
-            "@media (min-width: 992px)": {
-              ".col-lg-15": {
-                "-ms-flex": "0 0 20%",
-                "-webkit-flex": "0 0 20%",
-                "flex": "0 0 20%",
-                "max-width": "20%",
-                "width": "20%"
-              },
-              ".carousel-inner": {
-                "&.slides2": {
-                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(50%, 0, 0)",
-                    "transform": "translate3d(50%, 0, 0)"
-                  },
-                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(-50%, 0, 0)",
-                    "transform": "translate3d(-50%, 0, 0)"
-                  },
-                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(0, 0, 0)",
-                    "transform": "translate3d(0, 0, 0)"
-                  },
-                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
-                    "display": "block"
-                  }
-                },
-                "&.slides3": {
-                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(33.333333%, 0, 0)",
-                    "transform": "translate3d(33.333333%, 0, 0)"
-                  },
-                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(-33.333333%, 0, 0)",
-                    "transform": "translate3d(-33.333333%, 0, 0)"
-                  },
-                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(0, 0, 0)",
-                    "transform": "translate3d(0, 0, 0)"
-                  },
-                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
-                    "display": "block"
-                  }
-                },
-                "&.slides4": {
-                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(25%, 0, 0)",
-                    "transform": "translate3d(25%, 0, 0)"
-                  },
-                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(-25%, 0, 0)",
-                    "transform": "translate3d(-25%, 0, 0)"
-                  },
-                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(0, 0, 0)",
-                    "transform": "translate3d(0, 0, 0)"
-                  },
-                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
-                    "display": "block"
-                  }
-                },
-                "&.slides5": {
-                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(20%, 0, 0)",
-                    "transform": "translate3d(20%, 0, 0)"
-                  },
-                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(-20%, 0, 0)",
-                    "transform": "translate3d(-20%, 0, 0)"
-                  },
-                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(0, 0, 0)",
-                    "transform": "translate3d(0, 0, 0)"
-                  },
-                  ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4": {
-                    "display": "block"
-                  }
-                },
-                "&.slides6": {
-                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(16.666667%, 0, 0)",
-                    "transform": "translate3d(16.666667%, 0, 0)"
-                  },
-                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(-16.666667%, 0, 0)",
-                    "transform": "translate3d(-16.666667%, 0, 0)"
-                  },
-                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
-                    "left": "0",
-                    "-webkit-transform": "translate3d(0, 0, 0)",
-                    "transform": "translate3d(0, 0, 0)"
-                  },
-                  ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5": {
-                    "display": "block"
-                  }
-                }
-              }
-            },
-            "H2": {
-              "color": "#195aa5"
+            "H1": {
+              "color": "#ffffff"
             }
           },
-          "_name": "clients",
-          "_customHTML": "<section class=\"clients\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax, 'mbr-fullscreen': fullScreen}\" plugins=\"BootstrapCarouselSwipe,mbr-clients-slider\" data-interval=\"false\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"20\" step=\"1\" value=\"18\">\n        <input type=\"range\" inline title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"20\" step=\"1\" value=\"18\">\n                <input type=\"checkbox\" title=\"Schermvullend\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Toon titel\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Toon ondertitel\" name=\"showSubtitle\" checked>\n                <input type=\"checkbox\" title=\"Toon pijl\" name=\"showArrow\" checked>\n        <input type=\"range\" inline title=\"Items\" name=\"slidesCount\" min=\"1\" max=\"20\" step=\"1\" value=\"10\">\n        <select title=\"Zichtbare slides\" name=\"visibleSlides\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"showAutoplay\" checked>\n        <input type=\"range\" inline title=\"Autoplay Interval (ms)\" name=\"interval\" min=\"1000\" max=\"8000\" step=\"1000\" value=\"5000\" condition=\"showAutoplay\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Achtergrondafbeelding\" value=\"@PROJECT_PATH@/assets/images/website-layout-part-1-1920x705.png\" selected>\n            <input type=\"color\" title=\"Achtergrondkleur\" value=\"#195aa5\">\n            <input type=\"video\" title=\"Achtergrondvideo\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Verloopachtergrond\" name=\"gradientBg\" condition=\"bg.type=='color'\">\n        <input type=\"color\" title=\"Kleur 2\" name=\"color2\" value=\"#efefef\" condition=\"gradientBg &&bg.type=='color'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Doorschijnendheid\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>  \n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n        <div class=\"container mb-5\" mbr-if=\"showTitle||showSubtitle\">\n            <div class=\"media-container-row\">\n                <div class=\"col-12 align-center\">\n                    <h2 class=\"mbr-section-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>\n                        WIE ZIJN ONZE PARTNERS?</b></h2>\n                    <h3 class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">Onze partners betreffen nationale en internationale verenigingen, Urgo Foundation en bedrijfspartners<br></h3>\n                </div>\n            </div>\n        </div>\n\n    <div class=\"container\">\n        <div class=\"carousel slide\" role=\"listbox\" data-pause=\"true\" data-keyboard=\"false\" data-ride=\"{{showAutoplay ? 'carousel' : 'false'}}\" data-interval=\"{{showAutoplay ? interval : 'false'}}\">\n            <div class=\"carousel-inner\" mbr-list mbr-list-grow=\"slidesCount\" data-visible=\"{{visibleSlides}}\">\n                <div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/nvdv-238x299.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/dcop-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/vvn-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/urgo-foundation-3702x3702-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                \n            <div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/wuwhs-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div><div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/benuplus-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div><div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/e-medical-versluis-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div><div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/varodem-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div><div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/emje-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div><div class=\"carousel-item \">\n                    <div class=\"media-container-row\">\n                        <div class=\"col-md-12\">\n                            <div class=\"wrap-img \">\n                                <img src=\"@PROJECT_PATH@/assets/images/ontplooi-3702x4644.png\" class=\"img-responsive clients-img\" alt title>\n                            </div>\n                        </div>\n                    </div>\n                </div></div>\n            <div class=\"carousel-controls\">\n                <a data-app-prevent-settings class=\"carousel-control carousel-control-prev\" role=\"button\" data-slide=\"prev\">\n                    <span aria-hidden=\"true\" class=\"mbri-left mbr-iconfont\"></span>\n                    <span class=\"sr-only\">Vorige</span>\n                </a>\n                <a data-app-prevent-settings class=\"carousel-control carousel-control-next\" role=\"button\" data-slide=\"next\">\n                    <span aria-hidden=\"true\" class=\"mbri-right mbr-iconfont\"></span>\n                    <span class=\"sr-only\">Volgende</span>\n                </a>\n            </div>\n        </div>\n    </div>\n     <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_cid": "rwhsel9vdW",
-          "_anchor": "clients-x",
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Schermvullend\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Toon titel\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Toon ondertitel\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Toon tekst\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Toon knoppen\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Achtergrondafbeelding\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Achtergrondkleur\" value=\"#195aa5\" selected>\n            <input type=\"video\" title=\"Achtergrondvideo\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Doorschijnendheid\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"col-md-10 align-center\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    WIE ZIJN ONZE PARTNERS?</h1>\n                <h3 class=\"mbr-section-subtitle mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Knappe websites voor mobiel\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Intro op volle breedte met instelbare hoogte, achtergrondafbeelding met kleuroverlay. Klik op willekeurige tekst om te bewerken of vorm te geven.\n                </p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-black-outline\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">LEER MEER</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rBA1dV9Sf2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header16-2b"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
+            },
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
+            },
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
+            },
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background": "@overlayColor",
+              "opacity": "0",
+              "-webkit-transition": "0.2s opacity ease-in-out",
+              "transition": "0.2s opacity ease-in-out",
+              "& when (@gradOverlay)": {
+                "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+              }
+            },
+            ".mbr-gallery-item > div:hover": {
+              ".mbr-gallery-title::before": {
+                "background": "transparent !important"
+              },
+              "&:before": {
+                "opacity": "@overlayOpacity !important"
+              }
+            },
+            ".mbr-gallery-title": {
+              "font-size": ".9em",
+              "position": "absolute",
+              "display": "block",
+              "width": "100%",
+              "bottom": "0",
+              "padding": "1rem",
+              "color": "#fff",
+              "z-index": "2",
+              "&:before": {
+                "content": "\" \"",
+                "width": "100%",
+                "height": "100%",
+                "top": "0",
+                "left": "0",
+                "z-index": "-1",
+                "position": "absolute",
+                "background": "@overlayColor !important",
+                "opacity": "@overlayOpacity",
+                "-webkit-transition": "0.2s background ease-in-out",
+                "transition": "0.2s background ease-in-out",
+                "& when (@gradOverlay)": {
+                  "background": "linear-gradient(to left, @overlayColor, @overlayColor2) !important"
+                }
+              }
+            }
+          },
+          "_name": "gallery2",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Volle breedte\" name=\"fullWidth\">\n        <input type=\"range\" title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"range\" title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\" inline>\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#219d84\">\n        <input type=\"checkbox\" title=\"Overlay met kleurovergang\" name=\"gradOverlay\">\n        <input type=\"color\" title=\"Overlay kleur 1\" name=\"overlayColor2\" value=\"#ffffff\" condition=\"gradOverlay\">\n        <input type=\"range\" title=\"Overlay kleur 2\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" inline>\n        <input type=\"color\" title=\"Achtergrondkleur\" name=\"bgColor\" value=\"#195aa5\">\n\n        <input type=\"gallery\" title=\"Galerij\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"2\" mbr-gallery-show-filter></div>\n    </div>\n</section>",
+          "_anchor": "gallery2-2a",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "rBA0WXQsnK",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
+          "_global": false,
+          "_once": false,
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-7",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Nationale verenigingen",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/nvdv-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/nvdv-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Nationale verenigingen",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/dcop-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/dcop-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Nationale verenigingen",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/vvn-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/vvn-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Internationale verenigingen",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/urgo-foundation-3702x3702-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/urgo-foundation-3702x3702-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Internationale verenigingen",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/wuwhs-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/wuwhs-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Bedrijfspartner",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/benuplus-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/benuplus-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Bedrijfspartner",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/e-medical-versluis-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/e-medical-versluis-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Bedrijfspartner",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/varodem-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/varodem-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Bedrijfspartner",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/emje-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/emje-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": false
+              },
+              {
+                "tags": "Bedrijfspartner",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/ontplooi-2000x2509.png",
+                "thumb": "@PROJECT_PATH@/assets/images/ontplooi-2000x2509-800x1004.png",
+                "alt": "",
+                "title": "",
+                "customStyle1": "display-7",
+                "caption": "Onderschrift hier",
+                "active": true
+              }
+            ]
+          }
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "P": {
+              "color": "#767676"
+            }
+          },
+          "_name": "header16",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n         <input type=\"checkbox\" title=\"Toon pijl\" name=\"showArrow\" checked>\n         <input type=\"checkbox\" title=\"Schermvullend\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Toon titel\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Toon ondertitel\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Toon tekst\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Toon knoppen\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Achtergrondafbeelding\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Achtergrondkleur\" value=\"#195aa5\" selected>\n            <input type=\"video\" title=\"Achtergrondvideo\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Doorschijnendheid\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n       <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n\n\n</section>",
+          "_cid": "rBA1OM18ir",
+          "_anchor": "header16-2d",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
@@ -1644,7 +1720,7 @@
             }
           },
           "_name": "formbuilder",
-          "_customHTML": "<section class=\"form\" group=\"Form\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"9\">\n        <input type=\"range\" inline title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"7\">\n        <header>Style</header>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\" checked>\n        <input type=\"checkbox\" name=\"disableElements\" title=\"Disable Control\">\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#219d84\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#195aa5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#195aa5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Tekst\" value=\"#767676\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#ffffff\" condition=\"customStyle\">\n               <input type=\"checkbox\" title=\"Toon pijl\" name=\"showArrow\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Achtergrondafbeelding\" value=\"@PROJECT_PATH@/assets/images/website-format-1920x10803.png\" selected>\n            <input type=\"color\" title=\"Achtergrondkleur\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Doorschijnendheid\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div mbr-form class=\"col-lg-8 mx-auto mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"l.martin@urgomedical.nl\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler\">\n<div class=\"form-row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Bedankt voor het kandidaat stellen. U hoort spoedig van ons!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\">Oops...! some problem!</div>\n</div>\n<div class=\"dragArea form-row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h4 mbr-theme-style=\"display-1\" class=\"mbr-fonts-style\">Ja, Ik wil meedoen!</h4>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<hr>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-row\">\n<div class=\"col\">\n<input type=\"text\" name=\"nameFirst\" placeholder=\"Voornaam\" data-form-field=\"nameFirst\" class=\"form-control text-multiple\" value>\n</div>\n<div class=\"col\">\n<input type=\"text\" name=\"nameLast\" placeholder=\"Achternaam\" data-form-field=\"nameLast\" class=\"form-control text-multiple\" value>\n</div>\n</div>\n</div>\n<div data-for=\"email\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\" value>\n</div>\n<div data-for=\"telefoonnummer\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\" style>\n<input type=\"text\" name=\"telefoonnummer\" placeholder=\"Telefoonnummer\" data-form-field=\"telefoonnummer\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Wat is je functie?\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\" style>\n<select name=\"Wat is je functie?\" data-form-field=\"Wat is je functie?\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n<option value=\"Wat is je functie?\">Wat is je functie?</option>\n<option value=\"Wondverpleegkundige\">Wondverpleegkundige</option>\n<option value=\"Verpleegkundig specialist\">Verpleegkundig specialist</option>\n<option value=\"Dermatologisch verpleegkundige\">Dermatologisch verpleegkundige</option>\n<option value=\"Verpleegkundige niveau 3\">Verpleegkundige niveau 3</option>\n<option value=\"Verpleegkundige niveau 4\">Verpleegkundige niveau 4</option>\n<option value=\"Verpleegkundige niveau 5\">Verpleegkundige niveau 5</option>\n<option value=\"Praktijkondersteuner\">Praktijkondersteuner</option>\n<option value=\"Dokterassistent\">Dokterassistent</option>\n</select>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"bij welke organisatie werk je?\">\n<input type=\"text\" name=\"bij welke organisatie werk je?\" placeholder=\"Bij welke organisatie werk je?\" data-form-field=\"bij welke organisatie werk je?\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"text1\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"text1\" placeholder=\"Wat is je registratienummer? (i.v.m. de accreditatie)\" data-form-field=\"text1\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"text2\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"text2\" placeholder=\"Bij welke organisatie ben je geregistreerd?\" data-form-field=\"text\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Ma 17 Oktober - UMC+, Maastricht\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-control-label\">\n<label mbr-text mbr-theme-style=\"display-7\" for=\"Ma 17 Oktober - UMC+, Maastricht\" class=\"mbr-fonts-style\">Ik wil me graag aanmelden voor de volgende workshop:</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Ma 12 September - St Franciscus Vloetland groep\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Ma 12 September - St Franciscus Vloetland groep</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Wo 17 September - Erasmus MC, Rotterdam\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Wo 17 September - Erasmus MC, Rotterdam</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Di 5 Oktober - Rijnstate Ziekenhuis, Locatie Velp\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Di 5 Oktober - Rijnstate Ziekenhuis, Locatie Velp</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Vr 14 Oktober - Stichting Viecuri, Venlo\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Vr 14 Oktober - Stichting Viecuri, Venlo</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Ma 17 Oktober - UMC+, Maastricht\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Ma 17 Oktober - UMC+, Maastricht</label>\n</div>\n</div>\n<div data-for=\"message\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<textarea name=\"message\" placeholder=\"Message\" data-form-field=\"message\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"Heb je nog vragen, opmerkingen?\">Heb je nog vragen, opmerkingen?</textarea>\n</div>\n<div data-for=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-control-label\">\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" data-form-field=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text mbr-theme-style=\"display-7\" class=\"form-check-label\">Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)</label>\n</div>\n</div>\n<div class=\"col-auto\" mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\">\n<a data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" type=\"submit\" class=\"btn btn-secondary\">Verstuur</a>\n</div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n        </div>\n    </div>\n        <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"form\" group=\"Form\" plugins=\"formstyler, datepicker\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline=\"\" title=\"Boven\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"9\">\n        <input type=\"range\" inline=\"\" title=\"Onder\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"7\">\n        <header>Style</header>\n        <input type=\"checkbox\" name=\"customStyle\" title=\"Custom Style\" checked=\"\">\n        <input type=\"checkbox\" name=\"disableElements\" title=\"Disable Control\">\n        <input type=\"color\" name=\"fieldColor\" title=\"Field\" value=\"#ffffff\" condition=\"customStyle\">\n        <input type=\"color\" name=\"fieldHover\" title=\"Field Hover\" value=\"#219d84\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderColor\" title=\"Border\" value=\"#195aa5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"borderHover\" title=\"Border Hover\" value=\"#195aa5\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formText\" title=\"Tekst\" value=\"#767676\" condition=\"customStyle\">\n        <input type=\"color\" name=\"formPlaceholder\" title=\"Placeholders\" value=\"#ffffff\" condition=\"customStyle\">\n               <input type=\"checkbox\" title=\"Toon pijl\" name=\"showArrow\" checked=\"\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Achtergrondafbeelding\" value=\"@PROJECT_PATH@/assets/images/website-format-1920x10800.png\" selected=\"\">\n            <input type=\"color\" title=\"Achtergrondkleur\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Dekkleur\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Doorschijnendheid\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay &amp;&amp; bg.type=='image')\"></div>\n    <div class=\"container\">\n        <div class=\"row\">\n            <div mbr-form=\"\" class=\"col-lg-8 mx-auto mbr-form\">\n<!--Formbuilder Form-->\n<form action=\"l.martin@urgomedical.nl\" name=\"Form Name\" method=\"POST\" class=\"mbr-form form-with-styler\">\n<div class=\"form-row\">\n<div hidden=\"hidden\" data-form-alert=\"\" class=\"alert alert-success col-12\">Bedankt voor het kandidaat stellen. U hoort spoedig van ons!</div>\n<div hidden=\"hidden\" data-form-alert-danger=\"\" class=\"alert alert-danger col-12\">Oops...! some problem!</div>\n</div>\n<div class=\"dragArea form-row\">\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<h4 mbr-theme-style=\"display-1\" class=\"mbr-fonts-style\">Ja, Ik wil meedoen!</h4>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12\">\n<hr>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-row\">\n<div class=\"col\">\n<input type=\"text\" name=\"nameFirst\" placeholder=\"Voornaam\" data-form-field=\"nameFirst\" class=\"form-control text-multiple\" value=\"\">\n</div>\n<div class=\"col\">\n<input type=\"text\" name=\"nameLast\" placeholder=\"Achternaam\" data-form-field=\"nameLast\" class=\"form-control text-multiple\" value=\"\">\n</div>\n</div>\n</div>\n<div data-for=\"email\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"email\" mbr-theme-style=\"display-7\" class=\"form-control\" required=\"required\" value=\"\">\n</div>\n<div data-for=\"telefoonnummer\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"telefoonnummer\" placeholder=\"Telefoonnummer\" data-form-field=\"telefoonnummer\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"\">\n</div>\n<div data-for=\"Wat is je functie?\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<select name=\"Wat is je functie?\" data-form-field=\"Wat is je functie?\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n<option value=\"Wat is je functie?\">Wat is je functie?</option>\n<option value=\"Wondverpleegkundige\">Wondverpleegkundige</option>\n<option value=\"Verpleegkundig specialist\">Verpleegkundig specialist</option>\n<option value=\"Dermatologisch verpleegkundige\">Dermatologisch verpleegkundige</option>\n<option value=\"Verpleegkundige niveau 3\">Verpleegkundige niveau 3</option>\n<option value=\"Verpleegkundige niveau 4\">Verpleegkundige niveau 4</option>\n<option value=\"Verpleegkundige niveau 5\">Verpleegkundige niveau 5</option>\n<option value=\"Praktijkondersteuner\">Praktijkondersteuner</option>\n<option value=\"Doktersassistent\">Doktersassistent</option>\n</select>\n</div>\n<div class=\"col-lg-12 col-md-12 col-sm-12 form-group\" data-for=\"bij welke organisatie werk je?\">\n<input type=\"text\" name=\"bij welke organisatie werk je?\" placeholder=\"Bij welke organisatie werk je?\" data-form-field=\"bij welke organisatie werk je?\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"\">\n</div>\n<div data-for=\"text1\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"text1\" placeholder=\"Wat is je registratienummer? (i.v.m. de accreditatie)\" data-form-field=\"text1\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"\">\n</div>\n<div data-for=\"text2\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"text2\" placeholder=\"Bij welke organisatie ben je geregistreerd?\" data-form-field=\"text\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"\">\n</div>\n<div data-for=\"Ma 17 Oktober - UMC+, Maastricht\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-control-label\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" for=\"Ma 17 Oktober - UMC+, Maastricht\" class=\"mbr-fonts-style\">Ik wil me graag aanmelden voor de volgende workshop:</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Ma 12 September - St Franciscus Vloetland groep\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Ma 12 September - St Franciscus Vloetland groep</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Wo 17 September - Erasmus MC, Rotterdam\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Wo 17 September - Erasmus MC, Rotterdam</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Di 5 Oktober - Rijnstate Ziekenhuis, Locatie Velp\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Di 5 Oktober - Rijnstate Ziekenhuis, Locatie Velp</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Vr 14 Oktober - Stichting Viecuri, Venlo\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Vr 14 Oktober - Stichting Viecuri, Venlo</label>\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Ma 17 Oktober - UMC+, Maastricht\" data-form-field=\"Ik wil me graag aanmelden\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Ma 17 Oktober - UMC+, Maastricht</label>\n</div>\n</div>\n<div data-for=\"message\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<textarea name=\"message\" placeholder=\"Message\" data-form-field=\"message\" mbr-theme-style=\"display-7\" class=\"form-control\" value=\"Heb je nog vragen, opmerkingen?\">Heb je nog vragen, opmerkingen?</textarea>\n</div>\n<div data-for=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" class=\"col-lg-12 col-md-12 col-sm-12 form-group\">\n<div class=\"form-control-label\">\n</div>\n<div class=\"form-check\">\n<input type=\"checkbox\" value=\"Yes\" name=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" data-form-field=\"Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)\" mbr-theme-style=\"display-7\" class=\"form-check-input\">\n<label mbr-text=\"\" mbr-theme-style=\"display-7\" class=\"form-check-label\">Mogen we per mail contact met je opnemen? (i.v.m. privacy wetgeving)</label>\n</div>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-auto\">\n<a data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" type=\"submit\" class=\"btn btn-secondary\">Verstuur</a>\n</div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n        </div>\n    </div>\n        <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
           "_cid": "rAxmebK86z",
           "_anchor": "formbuilder-1z",
           "_PHPplaceholders": [],
