@@ -15,13 +15,13 @@
         "mainFont": "Rubik",
         "display1Font": "GothamBold",
         "display1Size": "3.25",
-        "display2Font": "DINPro-Regular_13937",
+        "display2Font": "GothamBook",
         "display2Size": 3,
-        "display5Font": "DINPro-Regular_13937",
+        "display5Font": "GothamBook",
         "display5Size": 1.5,
-        "display7Font": "DINPro-Regular_13937",
+        "display7Font": "GothamBook",
         "display7Size": 1,
-        "display4Font": "DINPro-Regular_13937",
+        "display4Font": "GothamBook",
         "display4Size": 1,
         "isRoundedButtons": true,
         "isAnimatedOnScroll": false,
@@ -70,6 +70,18 @@
         "name": "GothamBold",
         "url": null,
         "file": "@PROJECT_PATH@/fonts/GothamBold/font.ttf"
+      },
+      {
+        "css": "'GothamMedium'",
+        "name": "GothamMedium",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/GothamMedium/font.ttf"
+      },
+      {
+        "css": "'GothamBook'",
+        "name": "GothamBook",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/GothamBook/font.ttf"
       }
     ],
     "versionFirst": "4.7.6",
