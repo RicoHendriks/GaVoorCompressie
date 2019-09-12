@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "#GaVoorCompressie",
-    "currentPage": "page1.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -13,7 +13,7 @@
         "warningColor": "#879A9F",
         "dangerColor": "#B1A374",
         "mainFont": "Rubik",
-        "display1Font": "DINPro-Bold_13934",
+        "display1Font": "DINProBold",
         "display1Size": "3.25",
         "display2Font": "DINPro-Regular_13937",
         "display2Size": 3,
@@ -58,6 +58,12 @@
         "name": "DINPro-Bold_13934",
         "url": null,
         "file": "@PROJECT_PATH@/fonts/DINPro-Bold_13934/font.ttf"
+      },
+      {
+        "css": "'DINProBold'",
+        "name": "DINProBold",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/DINProBold/font.ttf"
       }
     ],
     "versionFirst": "4.7.6",
