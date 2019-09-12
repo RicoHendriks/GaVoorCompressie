@@ -13,7 +13,7 @@
         "warningColor": "#879A9F",
         "dangerColor": "#B1A374",
         "mainFont": "Rubik",
-        "display1Font": "DINProBold",
+        "display1Font": "GothamBold",
         "display1Size": "3.25",
         "display2Font": "DINPro-Regular_13937",
         "display2Size": 3,
@@ -64,6 +64,12 @@
         "name": "DINProBold",
         "url": null,
         "file": "@PROJECT_PATH@/fonts/DINProBold/font.ttf"
+      },
+      {
+        "css": "'GothamBold'",
+        "name": "GothamBold",
+        "url": null,
+        "file": "@PROJECT_PATH@/fonts/GothamBold/font.ttf"
       }
     ],
     "versionFirst": "4.7.6",
