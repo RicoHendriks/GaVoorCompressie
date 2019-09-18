@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "#GaVoorCompressie",
-    "currentPage": "Home.html",
+    "currentPage": "Wat ga ik leren?.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -1582,7 +1582,7 @@
         }
       ]
     },
-    "Home.html": {
+    "Index.html": {
       "settings": {
         "main": true,
         "title": "Home",
